@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Login da Secretaria</h1>
+  <form method="post" class="card">
+    <label>E-mail
+      <input type="email" name="email" required />
+    </label>
+    <label>Senha
+      <input type="password" name="password" required />
+    </label>
+    <button type="submit">Entrar</button>
+  </form>
+  <p>Usuário inicial: admin@escola.local / admin123</p>
+{% endblock %}

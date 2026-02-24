@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>CRM - Secretaria Escolar</h1>
+  <section class="card">
+    <p>Total de alunos cadastrados: <strong>{{ students_count }}</strong></p>
+    <p>Nível de acesso atual: <strong>{{ current_user.role }}</strong></p>
+  </section>
+{% endblock %}

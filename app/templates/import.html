@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Importar planilha de alunos</h1>
+  <p>Colunas esperadas: <code>matricula</code>, <code>nome</code>, <code>turma</code>, <code>data_nascimento</code>, <code>responsavel</code>.</p>
+  <form method="post" enctype="multipart/form-data" class="card">
+    <input type="file" name="file" accept=".xlsx,.xls" required />
+    <button type="submit">Importar</button>
+  </form>
+{% endblock %}

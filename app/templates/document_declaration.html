@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Declaração Escolar</title>
+    <style>body{font-family:Arial;padding:40px;line-height:1.6}.center{text-align:center}</style>
+  </head>
+  <body>
+    <h2 class="center">DECLARAÇÃO ESCOLAR</h2>
+    <p>Declaramos, para os devidos fins, que o(a) aluno(a) <strong>{{ student.name }}</strong>, matrícula <strong>{{ student.registration }}</strong>, está regularmente matriculado(a) na turma <strong>{{ student.class_name }}</strong>.</p>
+    <p>Responsável: {{ student.guardian_name or 'Não informado' }}.</p>
+    <p class="center">__________________________________________<br />Secretaria Escolar</p>
+  </body>
+</html>
