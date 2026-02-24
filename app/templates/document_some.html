@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ficha SOME</title>
+    <style>body{font-family:Arial;padding:24px}table{width:100%;border-collapse:collapse}td,th{border:1px solid #333;padding:8px}</style>
+  </head>
+  <body>
+    <h2>FICHA SOME</h2>
+    <table>
+      <tr><th>Matrícula</th><td>{{ student.registration }}</td></tr>
+      <tr><th>Nome</th><td>{{ student.name }}</td></tr>
+      <tr><th>Turma</th><td>{{ student.class_name }}</td></tr>
+      <tr><th>Data de Nascimento</th><td>{{ student.birth_date or '-' }}</td></tr>
+      <tr><th>Responsável</th><td>{{ student.guardian_name or '-' }}</td></tr>
+    </table>
+    <p>Observações: _________________________________________________</p>
+  </body>
+</html>

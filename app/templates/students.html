@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Alunos</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Matrícula</th>
+        <th>Nome</th>
+        <th>Turma</th>
+        <th>Documentos</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for student in students %}
+        <tr>
+          <td>{{ student.registration }}</td>
+          <td>{{ student.name }}</td>
+          <td>{{ student.class_name }}</td>
+          <td>
+            <a href="{{ url_for('declaracao', student_id=student.id) }}" target="_blank">Declaração</a>
+            |
+            <a href="{{ url_for('ficha_some', student_id=student.id) }}" target="_blank">Ficha SOME</a>
+          </td>
+        </tr>
+      {% else %}
+        <tr><td colspan="4">Nenhum aluno cadastrado.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
